@@ -1,7 +1,7 @@
 <?php
 
 
-Route::group(['prefix' => 'admin', 'namespace' => 'admin'], function () {
+Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
 
     /** 登录 */
     Route::any('/', 'IndexController@login')->name('admin.login');
@@ -47,6 +47,19 @@ Route::group(['prefix' => 'admin', 'namespace' => 'admin'], function () {
         Route::get('/permission/destroy/{id}','PermissionController@destroy')->name('admin.permission.destroy');
 
 
+        /* --------------- 轮播图管理 ------------- */
+
+        /* 轮播图管理 */
+        Route::get('/banner','BannerController@index')->name('admin.banner.index');
+
+        /** 添加轮播图 */
+        Route::post('/banner/create','BannerController@create')->name('admin.banner.create');
+
+        /* 编辑轮播图 */
+        Route::post('/banner/edit/{id}','BannerController@edit')->name('admin.banner.edit');
+
+        /* 删除轮播图 */
+        Route::get('/banner/destroy/{id}','BannerController@destroy')->name('admin.banner.destroy');
     });
 
 });

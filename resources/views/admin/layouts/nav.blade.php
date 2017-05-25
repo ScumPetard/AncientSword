@@ -38,6 +38,17 @@
                 </ul>
             </li>
             <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                    <span>内容管理</span>
+                    <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="/admin/banner"><i class="fa fa-circle-o"></i> 轮播图管理</a></li>
+                    <li><a href="/admin/permission"><i class="fa fa-circle-o"></i> 权限设置</a></li>
+                </ul>
+            </li>
+            <li class="treeview">
                 <a href="{{ route('admin.logout') }}">
                     <i class="fa fa-sign-out"></i> <span> 注销</span>
                 </a>
