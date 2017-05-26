@@ -16,48 +16,11 @@
     </div>
     <!-- -->
     <div class="honor-box">
-        <div class="item wow fadeInUp animated">
-            <img src="/assets/i/honor-img-1.png">
-        </div>
-        <div class="item wow fadeInUp animated">
-            <img src="/assets/i/honor-img-2.png">
-        </div>
-        <div class="item wow fadeInUp animated">
-            <img src="/assets/i/honor-img-3.png">
-        </div>
-        <div class="item wow fadeInUp animated">
-            <img src="/assets/i/honor-img-4.png">
-        </div>
-        <div class="item wow fadeInUp animated">
-            <img src="/assets/i/honor-img-5.png">
-        </div>
-        <div class="item wow fadeInUp animated">
-            <img src="/assets/i/honor-img-6.png">
-        </div>
-        <div class="item wow fadeInUp animated">
-            <img src="/assets/i/honor-img-7.png">
-        </div>
-        <div class="item wow fadeInUp animated">
-            <img src="/assets/i/honor-img-8.png">
-        </div>
-        <div class="item wow fadeInUp animated">
-            <img src="/assets/i/honor-img-9.png">
-        </div>
-        <div class="item wow fadeInUp animated">
-            <img src="/assets/i/honor-img-10.png">
-        </div>
-        <div class="item wow fadeInUp animated">
-            <img src="/assets/i/honor-img-11.png">
-        </div>
-        <div class="item wow fadeInUp animated">
-            <img src="/assets/i/honor-img-12.png">
-        </div>
-        <div class="item wow fadeInUp animated">
-            <img src="/assets/i/honor-img-13.png">
-        </div>
-        <div class="item wow fadeInUp animated">
-            <img src="/assets/i/honor-img-14.png">
-        </div>
+        @foreach($honors as $honor)
+            <div class="item wow fadeInUp animated">
+                <img src="{{$honor->url}}">
+            </div>
+        @endforeach
         <div class="clear"></div>
     </div>
 @stop

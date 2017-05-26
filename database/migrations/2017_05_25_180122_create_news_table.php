@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateHonorsTable extends Migration
+class CreateNewsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,11 +12,14 @@ class CreateHonorsTable extends Migration
      */
     public function up()
     {
-        Schema::create('honors', function (Blueprint $table) {
+        Schema::create('news', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->string('url');
-            $table->integer('sort');
+            $table->string('title');
+            $table->string('author');
+            $table->string('category');
+            $table->string('preview');
+            $table->text('intro');
+            $table->text('content');
             $table->timestamps();
         });
     }
@@ -28,6 +31,6 @@ class CreateHonorsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('honors');
+        Schema::drop('news');
     }
 }

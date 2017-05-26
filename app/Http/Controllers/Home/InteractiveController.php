@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Home;
 
+use App\Models\Work;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -16,7 +17,8 @@ class InteractiveController extends Controller
 
     public function work()
     {
-        return view('home.interactive.work');
+        $works = Work::all();
+        return view('home.interactive.work',compact('works'));
     }
 
     public function contact()

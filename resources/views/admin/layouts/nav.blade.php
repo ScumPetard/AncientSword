@@ -45,7 +45,10 @@
                 </a>
                 <ul class="treeview-menu">
                     <li><a href="/admin/banner"><i class="fa fa-circle-o"></i> 轮播图管理</a></li>
-                    <li><a href="/admin/permission"><i class="fa fa-circle-o"></i> 权限设置</a></li>
+                    <li><a href="/admin/honor"><i class="fa fa-circle-o"></i> 企业荣誉设置</a></li>
+                    <li><a href="/admin/news"><i class="fa fa-circle-o"></i> 新闻设置</a></li>
+                    <li><a href="/admin/product"><i class="fa fa-circle-o"></i> 产品设置</a></li>
+                    <li><a href="/admin/work"><i class="fa fa-circle-o"></i> 招聘信息设置</a></li>
                 </ul>
             </li>
             <li class="treeview">

@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateHonorsTable extends Migration
+class CreateWorksTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,11 +12,11 @@ class CreateHonorsTable extends Migration
      */
     public function up()
     {
-        Schema::create('honors', function (Blueprint $table) {
+        Schema::create('works', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('url');
-            $table->integer('sort');
+            $table->string('price');
+            $table->string('intro');
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ class CreateHonorsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('honors');
+        Schema::drop('works');
     }
 }

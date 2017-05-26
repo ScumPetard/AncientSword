@@ -31,9 +31,9 @@
 <!-- banner -->
 <div class="index-banner swiper-container">
     <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="/assets/i/index-banner.png"></div>
-        <div class="swiper-slide"><img src="/assets/i/index-banner.png"></div>
-        <div class="swiper-slide"><img src="/assets/i/index-banner.png"></div>
+        @foreach($banners as $banner)
+            <div class="swiper-slide"><a href="{{$banner->link}}"><img src="{{$banner->url}}"></a></div>
+        @endforeach
     </div>
 </div>
 <!-- banner end -->

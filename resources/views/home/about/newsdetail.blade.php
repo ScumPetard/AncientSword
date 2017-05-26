@@ -2,6 +2,25 @@
 
 @section('title','公司简介')
 
+@section('css')
+    <style>
+        .backgo {
+            background-color: #FF4351;
+            border-color: #FF4351;
+            color: #fff;
+            font-weight: 300;
+            font-size: 16px;
+            text-decoration: none;
+            line-height: 40px;
+            height: 40px;
+            padding: 0 40px;
+            margin: 0;
+            display: inline-block;
+            border: none;
+        }
+    </style>
+@stop
+
 @section('content')
     <div class="title-pulic">
         <div class="tle wow fadeInUp animated">
@@ -17,25 +36,23 @@
     <!-- -->
     <div class="news-box">
         <div class="news-content">
-            @foreach($news as $new)
-                <a href="/about/news-detail/{{$new->id}}">
-                    <div class="item wow fadeInUp animated">
-                        <div class="tel">
-                            <i></i>{{$new->title}}
-                        </div>
-                        <div class="txt">
-                            <div class="author">
-                                <span>作者：{{$new->author}}</span><span>时间：{{$new->created_at}}</span><span>新闻分类 : {{$new->category}}</span>
-                            </div>
-                            <img src="{{$new->preview}}" alt="">
-                            <p>{{$new->intro}}</p>
-                        </div>
+            <div class="item wow fadeInUp animated">
+                <div class="tel">
+                    <i></i>{{$news->title}}
+                </div>
+                <div class="txt">
+                    <div class="author">
+                        <span>作者：{{$news->author}}</span><span>时间：{{$news->created_at}}</span><span>新闻分类 : {{$news->category}}</span>
                     </div>
-                </a>
-            @endforeach
-
-            <div class="page wow fadeInUp animated">
-                {!! $news->render() !!}
+                    <img src="{{$news->preview}}" alt="">
+                    <p>{{$news->intro}}</p>
+                    <div style="width: 100%">
+                        {!! $news->content !!}
+                    </div>
+                    <div style="width: 100%;text-align: center;">
+                        <a href="/about/news" class="backgo">返回新闻中心</a>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="news-up wow fadeInUp animated">

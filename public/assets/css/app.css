@@ -583,6 +583,19 @@ div.clear{
 	border-radius: 3px;
 	margin:0 7px;
 }
+.news-box .news-content .page span {
+    float: left;
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    font-size: 18px;
+    background:#AAAAAA;
+    color: #fff;
+    border-radius: 3px;
+    margin:0 7px;
+}
 .news-box .news-content .page a:hover{
 	background:#ec3b49;
 }

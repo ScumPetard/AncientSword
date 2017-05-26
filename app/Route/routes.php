@@ -6,6 +6,7 @@ Route::group(['namespace' => 'Home'], function () {
     Route::get('/about/about','AboutController@about');
     Route::get('/about/honor','AboutController@honor');
     Route::get('/about/news','AboutController@news');
+    Route::get('/about/news-detail/{id}','AboutController@news_detail');
     Route::get('/product','ProductController@index');
     Route::get('/about/sales','AboutController@sales');
     Route::get('/research/base','ResearchController@base');

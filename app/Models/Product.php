@@ -5,17 +5,17 @@ namespace App\Models;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 
-class Honor extends Model
+class Product extends Model
 {
     /**
      * The database table used by the model.
      *
      * @var string
      */
-    protected $table = 'honors';
+    protected $table = 'products';
 
     protected $fillable = [
-        'url','name','sort'
+        'name','preview','intro','link','sort'
     ];
 
     /**

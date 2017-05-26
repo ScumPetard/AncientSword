@@ -43,9 +43,23 @@ class IndexController extends Controller
         }
     }
 
+    /**
+     * 主页
+     * @return \Illuminate\Contracts\View\Factory
+     * \Illuminate\View\View
+     */
     public function index()
     {
         return view('admin.index.index');
+    }
+
+    public function upload(Request $request)
+    {
+        try {
+            return 1;
+        } catch (\Exception $exception){
+            return Tools::notifyTo($exception->getMessage(), 'danger');
+        }
     }
 
 }
