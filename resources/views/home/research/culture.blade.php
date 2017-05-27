@@ -1,6 +1,6 @@
 @extends('home.layouts.base')
 
-@section('title','公司简介')
+@section('title','禅茶文化')
 
 @section('content')
     <!-- banner end -->

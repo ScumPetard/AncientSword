@@ -1,6 +1,6 @@
 @extends('home.layouts.base')
 
-@section('title','公司简介')
+@section('title','走进鸡公嘴')
 
 @section('content')
     <div class="title-pulic">

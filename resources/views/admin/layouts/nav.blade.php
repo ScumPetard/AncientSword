@@ -49,6 +49,7 @@
                     <li><a href="/admin/news"><i class="fa fa-circle-o"></i> 新闻设置</a></li>
                     <li><a href="/admin/product"><i class="fa fa-circle-o"></i> 产品设置</a></li>
                     <li><a href="/admin/work"><i class="fa fa-circle-o"></i> 招聘信息设置</a></li>
+                    <li><a href="/admin/video"><i class="fa fa-circle-o"></i> 视频设置</a></li>
                 </ul>
             </li>
             <li class="treeview">

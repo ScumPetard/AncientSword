@@ -1,6 +1,6 @@
 @extends('home.layouts.base')
 
-@section('title','公司简介')
+@section('title','科研中心')
 
 @section('content')
     <!-- banner end -->

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Home;
 
+use App\Models\Video;
 use App\Models\Work;
 use Illuminate\Http\Request;
 
@@ -12,7 +13,8 @@ class InteractiveController extends Controller
 {
     public function video()
     {
-        return view('home.interactive.video');
+        $videos = Video::orderBy('id','desc')->get();
+        return view('home.interactive.video',compact('videos'));
     }
 
     public function work()

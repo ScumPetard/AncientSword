@@ -118,6 +118,20 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
 
         /* 删除招聘信息 */
         Route::get('/work/destroy/{id}','WorkController@destroy')->name('admin.work.destroy');
+
+        /* --------------- 视频管理 ------------- */
+
+        /* 视频管理 */
+        Route::get('/video','VideoController@index')->name('admin.video.index');
+
+        /** 添加视频 */
+        Route::post('/video/create','VideoController@create')->name('admin.video.create');
+
+        /* 编辑视频 */
+        Route::post('/video/edit/{id}','VideoController@edit')->name('admin.video.edit');
+
+        /* 删除视频 */
+        Route::get('/video/destroy/{id}','VideoController@destroy')->name('admin.video.destroy');
     });
 
 });

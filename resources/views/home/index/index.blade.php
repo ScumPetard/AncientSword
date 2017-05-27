@@ -2,6 +2,14 @@
 
 @section('title','古剑山')
 
+    @section('css')
+        <style>
+            .video-player {
+                width:60% !important;
+            }
+        </style>
+    @stop
+
 @section('content')
     <div class="index-infor">
         <div class="title bounceInLeft animated">
@@ -50,7 +58,7 @@
     <div class="index-honor ">
         <div class="warpin ">
             <div class="video wow fadeInUp animated">
-                <img src="assets/i/honor-video.png" alt="">
+                <img src="assets/i/honor-video.png" onclick="videoPlayer();">
             </div>
             <div class="img wow fadeInUp animated">
                 <img src="assets/i/index-honor-img.png" alt="">
@@ -85,29 +93,49 @@
         </div>
     </div>
     <div class="index-newslist">
-        <div class="item wow fadeInUp animated">
-            <h2>显齿蛇葡萄芽茶价格昂贵的原因</h2>
-            <p>天月茶书院的开业庆典在重庆北滨路天月茶城内隆重举行， 天月集团和天月茶书院的全体员工</p>
-            <a href="javascript:void(0)">Continue Reading →</a>
-        </div>
-        <div class="item wow fadeInUp animated">
-            <h2>显齿蛇葡萄芽茶价格昂贵的原因</h2>
-            <p>天月茶书院的开业庆典在重庆北滨路天月茶城内隆重举行， 天月集团和天月茶书院的全体员工</p>
-            <a href="javascript:void(0)">Continue Reading →</a>
-        </div>
-        <div class="item wow fadeInUp animated">
-            <h2>显齿蛇葡萄芽茶价格昂贵的原因</h2>
-            <p>天月茶书院的开业庆典在重庆北滨路天月茶城内隆重举行， 天月集团和天月茶书院的全体员工</p>
-            <a href="javascript:void(0)">Continue Reading →</a>
-        </div>
+        @foreach($news as $new)
+            <div class="item wow fadeInUp animated">
+                <h2>{{$new->title}}</h2>
+                <p style="height: 54px;overflow: hidden;">{{$new->intro}}</p>
+                <a href="/about/news-detail/{{$new->id}}">Continue Reading →</a>
+            </div>
+        @endforeach
+    </div>
+
+    <div id="video" style="display: none;">
+        <video poster="{{$video->preview}}" controls crossorigin>
+            <source src="{{$video->filepath}}" type="video/mp4">
+        </video>
     </div>
 @stop
 
 @section('js')
+    <link rel="stylesheet" href="/player/plyr.css">
+    <script src="/player/plyr.js"></script>
+    <script src="https://cdn.bootcss.com/layer/3.0.1/layer.min.js"></script>
+    <script>plyr.setup();</script>
     <script>
         $('.icon>span').hover(function () {
             $(this).addClass('hinge');
         });
+        /**
+         * 视频播放
+         */
+        function videoPlayer() {
+            var deo = $('#video');
+            layer.open({
+                type: 1,
+                width:500,
+                height : 600,
+                title: false,
+                resize : true,
+                closeBtn: 0,
+                shadeClose: true,
+                skin: 'video-player',
+                content: deo
+            });
+        }
+
     </script>
 @stop
 
